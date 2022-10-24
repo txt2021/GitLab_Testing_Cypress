@@ -23,6 +23,8 @@ jobs:
         repository: txt2021/GitLab_Testing_Cypress
         ref:  report
         path: ./docs
+    - name: Install cli
+      run: npm install -g allure-commandline
     - name: Generate Allure Report
       if: always()
       run: npm run report-generate

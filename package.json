@@ -1,5 +1,19 @@
 {
-  "dependencies": {
+  "name": "cypresstest",
+  "version": "1.0.0",
+  "description": "testing with cypress framework",
+  "scripts": {
+    "cypress:run": "npx cypress run --env allure=true",
+    "cypress:open": "npx cypress open",
+    "report-generate": "allure generate allure-results --clean -o allure-report",
+    "report-open":"npx allure open allure-report"
+  },
+  "author": "Tetiana Chuiasova",
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.33.1",
     "cypress": "^10.10.0"
+  },
+  "dependencies": {
+    "mocha": "^10.1.0"
   }
 }
